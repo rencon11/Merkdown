@@ -78,6 +78,7 @@ namespace Merkdown
             textArea.TabIndex = 1;
             textArea.Text = "";
             textArea.WordWrap = false;
+            textArea.KeyDown += textArea_KeyDown;
             // 
             // statusStrip1
             // 
@@ -141,7 +142,9 @@ namespace Merkdown
             Controls.Add(statusStrip1);
             Name = "Form1";
             Text = "Merkdown";
+            FormClosing += Form1_FormClosing;
             Load += Form1_Load;
+            KeyDown += Form1_KeyDown;
             tableLayoutPanel1.ResumeLayout(false);
             statusStrip1.ResumeLayout(false);
             statusStrip1.PerformLayout();

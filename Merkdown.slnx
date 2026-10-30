@@ -1,3 +1,10 @@
 <Solution>
-  <Project Path="Merkdown/Merkdown.csproj" />
+  <Configurations>
+    <BuildType Name="Debug" />
+    <BuildType Name="OnlyOneExe" />
+    <BuildType Name="Release" />
+  </Configurations>
+  <Project Path="Merkdown/Merkdown.csproj">
+    <BuildType Solution="Debug|*" Project="OnlyOneExe" />
+  </Project>
 </Solution>

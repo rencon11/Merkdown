@@ -6,8 +6,21 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <Configurations>Debug;Release;OnlyOneExe</Configurations>
   </PropertyGroup>
 
+
+
+  <PropertyGroup Condition="'$(Configuration)' == 'OnlyOneExe'">
+	  <OutputType>WinExe</OutputType>
+	  <TargetFramework>net10.0-windows</TargetFramework>
+	  <UseWindowsForms>true</UseWindowsForms>
+
+	  <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+	  <SelfContained>true</SelfContained>
+	  <PublishSingleFile>true</PublishSingleFile>
+	  <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+  </PropertyGroup>
   <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>

@@ -18,6 +18,6 @@ public class ImeRichTextBox : RichTextBox
 
     protected virtual void OnImeCompositionChanged()
     {
-        ImeCompositionChanged?.Invoke(this, EventArgs.Empty);
+        ImeCompositionChanged.Invoke(this, EventArgs.Empty);
     }
 }
